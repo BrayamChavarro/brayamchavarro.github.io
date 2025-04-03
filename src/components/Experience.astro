@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Coformacion 2025-I",
+    company: "Fusoft",
+    description:
+      "Realizo mi coformacion empresarial correspondiente al 3er semestre, hago parte de la Fabrica de soluciones empresariales.",
+    link: "Linkedin-Fusoft",
+  },
+  
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
