@@ -2,11 +2,12 @@ import { defineConfig } from 'astro/config'
 import tailwind from "@astrojs/tailwind"
 import robotsTxt from "astro-robots-txt"
 
-// https://astro.build/config
+const isProd = process.env.NODE_ENV === 'production'
+
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  site: 'https://brayamchavarro.github.io/', // Cambia esto a tu URL de GitHub Pages
-  base: '/brayamchavarro.github.io/', // Asegúrate de usar el nombre del repositorio
-  outDir: 'dist', // Directorio de salida para la construcción
+  site: 'https://brayamchavarro.github.io/', // Tu URL pública está bien
+  base: isProd ? '/brayamchavarro.github.io/' : '/', // Solo usa base en producción
+  outDir: 'dist',
 })
 
