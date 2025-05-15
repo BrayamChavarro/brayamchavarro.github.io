@@ -5,6 +5,10 @@ import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
+// Importar las imágenes
+import gestaskImage from "../../public/projects/svgl.webp"
+import projectAIImage from "../../public/projects/adventjs.webp"
+
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -24,7 +28,7 @@ const PROJECTS = [
       " ¿Necesitas organizar tus tareas? esto es lo ideal para ti",
     link: "not yet",
     github: "https://github.com/brayamchavarro/gestask",
-    image: "./projects/adventjs.webp",
+    image: gestaskImage.src,
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
@@ -32,7 +36,7 @@ const PROJECTS = [
     description:
       "Plataforma de IA para la Cámara de Comercio de Bogotá, que permite a los usuarios obtener informacion sobre eventos a su interes",
     link: "not yet",
-    image: "./projects/svgl.webp",
+    image: projectAIImage.src,
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
