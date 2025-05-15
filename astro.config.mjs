@@ -5,7 +5,7 @@ import robotsTxt from "astro-robots-txt";
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
   site: 'https://brayamchavarro.github.io',
-  base: '/',
+  base: '/brayamchavarro.github.io',
   output: 'static',
   outDir: 'dist',
 });
